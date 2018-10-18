@@ -23,7 +23,15 @@ module.exports = {
 
     return {
       average_sales: total_sales / sales_data["Results"].length,
-
+      employees_exceeding: function(amount) {
+        return sales_data["Results"]
+          .filter(function(employee) {
+            // we explictly want "exceeding", so it's > and not >=
+            return employee["Sales"] > amount
+          }).map(function(employee) {
+            return employee["Name"]
+          })
+      }
     }
   }
 }

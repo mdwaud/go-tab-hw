@@ -67,7 +67,18 @@ describe('models', function() {
 
     it('computes the average', function() {
       obj = models.question_3(sales_data)
+
       assert.equal(obj.average_sales, 2100)
+    });
+
+    it('calculates employees exceeding 2000', function() {
+      obj = models.question_3(sales_data)
+      employees = obj.employees_exceeding(2000)
+
+      // something like assert.same_elements() would be useful
+      assert.equal(employees.length, 2)
+      assert(employees.includes("Frank Jones"))
+      assert(employees.includes("Sally Smith"))
     });
   });
 });
