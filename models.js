@@ -14,5 +14,16 @@ module.exports = {
     const result = stmt.all();
 
     return result
+  },
+
+  question_3: function(sales_data) {
+    total_sales = sales_data["Results"].reduce(function(acc, row) {
+      return row["Sales"] + acc
+    }, 0)
+
+    return {
+      average_sales: total_sales / sales_data["Results"].length,
+
+    }
   }
 }

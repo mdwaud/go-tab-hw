@@ -1,4 +1,4 @@
-# Note: these should have index / foreign key constraints where appropriate
+/* Note: these should have index / foreign key constraints where appropriate */
 
 CREATE TABLE SALES_AGENTS (
   AGENT_ID INTEGER PRIMARY KEY AUTOINCREMENT,

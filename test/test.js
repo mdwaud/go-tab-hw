@@ -41,4 +41,33 @@ describe('models', function() {
       // etc...
     });
   });
+
+  describe('#question_3', function() {
+    let sales_data = {
+      "Results": [
+        {
+          "Name": "Frank Jones",
+          "Department": "North America",
+          "Sales": 2500
+        }, {
+          "Name": "Sally Smith",
+          "Department": "North America",
+          "Sales": 2200
+        }, {
+          "Name": "Ed Kramer",
+          "Department": "Europe",
+          "Sales": 1700
+        }, {
+          "Name": "Susan Johnson",
+          "Department": "Asia",
+          "Sales": 2000
+        }
+      ]
+    }
+
+    it('computes the average', function() {
+      obj = models.question_3(sales_data)
+      assert.equal(obj.average_sales, 2100)
+    });
+  });
 });
