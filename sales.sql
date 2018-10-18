@@ -1,3 +1,5 @@
+# Note: these should have index / foreign key constraints where appropriate
+
 CREATE TABLE SALES_AGENTS (
   AGENT_ID INTEGER PRIMARY KEY AUTOINCREMENT,
   AGENT_NAME VARCHAR(255) NOT NULL,
