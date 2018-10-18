@@ -33,5 +33,13 @@ module.exports = {
           })
       }
     }
+  },
+
+  question_4:
+`<style>
+  #container > #block1 > #num1.red {
+    color: red
   }
+  </style>`
+
 }
