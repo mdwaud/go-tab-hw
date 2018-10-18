@@ -4,12 +4,15 @@
   "description": "HW answers in action",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "go-tab-hw"
   },
   "author": "mdwaud",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
 }
