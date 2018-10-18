@@ -1,8 +1,11 @@
 var assert = require('assert');
-describe('Example', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1,2,3].indexOf(4), -1);
+var models = require('../models.js')
+
+describe('models', function() {
+  describe('#add()', function() {
+    it('should add numbers', function() {
+      actual = models.add(1,2)
+      assert.equal(actual, 3);
     });
   });
 });
