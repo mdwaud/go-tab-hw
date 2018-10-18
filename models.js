@@ -1,5 +1,9 @@
 module.exports = {
-  add: function(a, b) {
-    return a + b
+  db_test: function(db, value) {
+    let sql = `SELECT ? as 'result';`;
+    const stmt = db.prepare(sql);
+    const result = stmt.get(value);
+
+    return result['result']
   }
 }

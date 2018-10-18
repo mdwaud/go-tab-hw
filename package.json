@@ -13,6 +13,7 @@
   "author": "mdwaud",
   "license": "ISC",
   "dependencies": {
+    "better-sqlite3": "^5.0.1",
     "mocha": "^5.2.0"
   }
 }
