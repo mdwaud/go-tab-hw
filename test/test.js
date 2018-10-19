@@ -81,4 +81,13 @@ describe('models', function() {
       assert(employees.includes("Sally Smith"))
     });
   });
+
+  describe('#question_6', function() {
+    it('selects the repeating words and their counts', function() {
+      const result = models.question_6(`${__dirname}/words.txt`)
+
+      assert(result.includes("3 bob"))
+      assert(result.includes("2 charlie"))
+    })
+  })
 });

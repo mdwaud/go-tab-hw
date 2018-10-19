@@ -1,3 +1,5 @@
+const { spawnSync } = require( 'child_process' )
+
 module.exports = {
   question_1: function(db) {
     let sql = `
@@ -40,11 +42,9 @@ module.exports = {
   #container > #block1 > #num1.red {
     color: red
   }
-  </style>`
+  </style>`,
 
-}
-
-  question_5: "https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html"
+  question_5: "https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html",
   /*
   The HTTP spec does a much better job than I could do:
   https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
@@ -62,3 +62,11 @@ module.exports = {
   the wonder that is 'multipart/form-data'
   */
 
+  question_6: function(filename) {
+    // const cmd = `sort ${filename} | uniq -c | awk '{ if ($1 != 1) { print } }'`
+    const cmd = `sort ${filename}`
+    const output = spawnSync( './count_dupes.sh', [filename] );
+
+    return output.stdout.toString()
+  }
+}
