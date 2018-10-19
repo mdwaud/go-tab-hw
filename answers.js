@@ -18,6 +18,11 @@ module.exports = {
     return result
   },
 
+  // question 2:
+  // Not sure I completely understand this one, but you could just add a
+  // table off of salesrecords that has the commission paid. Depends on
+  // how normalized you want your schema to be.
+
   question_3: function(sales_data) {
     total_sales = sales_data["Results"].reduce(function(acc, row) {
       return row["Sales"] + acc
