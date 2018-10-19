@@ -43,3 +43,22 @@ module.exports = {
   </style>`
 
 }
+
+  question_5: "https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html"
+  /*
+  The HTTP spec does a much better job than I could do:
+  https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
+  But that's just a spec. Sometimes people do weird stuff with their
+  implementations and you just have to deal with it.
+
+  To summarize a few differences between GET and POST
+  HTTP GET is supposed to be idempotent - you access a resource without any
+  changes to the system (besides some logging). Typically it's used for "read"
+  operations in both frontends and APIs.
+
+  HTTP POST is meant to more explicitly transfer data to a server and may cause
+  side effects. Typically it's used for "insert" type operations such as form
+  submissions. It also handles parameters differently than GET and supports
+  the wonder that is 'multipart/form-data'
+  */
+
