@@ -1,8 +1,8 @@
-var assert = require('assert');
+const assert = require('assert');
 const fs = require('fs')
-var answers = require('../answers.js')
+const answers = require('../answers.js')
 
-const sales_fixture = 'sales.sql'
+const sales_fixture = 'test/sales.sql'
 const Database = require('better-sqlite3');
 
 
@@ -19,7 +19,7 @@ describe('answers', function() {
 
   describe('#question_1()', function() {
     before(function() {
-      let data = fs.readFileSync(sales_fixture, 'utf-8')
+      const data = fs.readFileSync(sales_fixture, 'utf-8')
       db.exec(data)
     })
 
@@ -43,7 +43,7 @@ describe('answers', function() {
   });
 
   describe('#question_3', function() {
-    let sales_data = {
+    const sales_data = {
       "Results": [
         {
           "Name": "Frank Jones",

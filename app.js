@@ -1,5 +1,4 @@
-var answers = require('./answers.js')
-
+const answers = require('./answers.js')
 const http = require('http');
 
 const hostname = '127.0.0.1';
