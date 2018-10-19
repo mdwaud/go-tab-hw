@@ -1,12 +1,12 @@
 var assert = require('assert');
 const fs = require('fs')
-var models = require('../models.js')
+var answers = require('../answers.js')
 
 const sales_fixture = 'sales.sql'
 const Database = require('better-sqlite3');
 
 
-describe('models', function() {
+describe('answers', function() {
   var db;
 
   before(function(){
@@ -24,7 +24,7 @@ describe('models', function() {
     })
 
     it('run the query', function() {
-      results = models.question_1(db)
+      results = answers.question_1(db)
 
       // we should have 4 rows
       assert.equal(results.length, 4);
@@ -66,13 +66,13 @@ describe('models', function() {
     }
 
     it('computes the average', function() {
-      obj = models.question_3(sales_data)
+      obj = answers.question_3(sales_data)
 
       assert.equal(obj.average_sales, 2100)
     });
 
     it('calculates employees exceeding 2000', function() {
-      obj = models.question_3(sales_data)
+      obj = answers.question_3(sales_data)
       employees = obj.employees_exceeding(2000)
 
       // something like assert.same_elements() would be useful
@@ -84,7 +84,7 @@ describe('models', function() {
 
   describe('#question_6', function() {
     it('selects the repeating words and their counts', function() {
-      const result = models.question_6(`${__dirname}/words.txt`)
+      const result = answers.question_6(`${__dirname}/words.txt`)
 
       assert(result.includes("3 bob"))
       assert(result.includes("2 charlie"))
